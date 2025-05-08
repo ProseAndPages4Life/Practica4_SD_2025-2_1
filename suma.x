@@ -1,5 +1,7 @@
-struct dupla_int { int a;
+struct dupla_int { 
+int a;
 int b;
+int peticion;
 };
 
 program SUMA_PROG{ version SUMA_VERS {

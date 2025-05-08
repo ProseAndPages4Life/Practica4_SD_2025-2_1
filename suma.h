@@ -17,6 +17,7 @@ extern "C" {
 struct dupla_int {
 	int a;
 	int b;
+	int peticion;
 };
 typedef struct dupla_int dupla_int;
 

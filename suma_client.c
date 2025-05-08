@@ -21,12 +21,15 @@ suma_prog_1(char *host)
 		exit (1);
 	}
 #endif	/* DEBUG */
-
+suma_1_arg.a = 123;
+suma_1_arg.b = 22;
+suma_1_arg.peticion++;
 	result_1 = suma_1(&suma_1_arg, clnt);
 	if (result_1 == (int *) NULL) {
 		//clnt_perror (clnt, "llamada fallo\tcall failed\n");
-		clnt_perror (clnt, "llamada fallo\n");	
+		clnt_perror (clnt, "fallo llamada\n");	
 	}
+	printf("Solicitando ejecucion de petición por el cliente");
 #ifndef	DEBUG
 	clnt_destroy (clnt);
 #endif	 /* DEBUG */
@@ -39,7 +42,7 @@ main (int argc, char *argv[])
 	char *host;
 
 	if (argc < 2) {
-		printf ("uso: %s server_host\n", argv[0]);
+		printf ("uso: %s ip servidor\n", argv[0]);
 		//printf ("usage: %s server_host\n", argv[0]);
 		exit (1);
 	}

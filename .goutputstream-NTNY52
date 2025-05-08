@@ -9,17 +9,12 @@
 int *
 suma_1_svc(dupla_int *argp, struct svc_req *rqstp)
 {
-	int n=1;
 	static int  result;
-	printf("Realizando ejecucion de peticion.\n");
-	//printf("Peticion no:%d\n",n);
 
 	/*
 	 * insert server code here
 	 */
 printf("El procedimiento ha sido invocado remotamente!\n");
-printf("Parametros recibidos:\n");
-printf("a=%d b=%d\npeticion numero:%d\n\n",argp->a,argp->b,argp->peticion);
 
 	return &result;
 }

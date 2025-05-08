@@ -14,7 +14,5 @@ xdr_dupla_int (XDR *xdrs, dupla_int *objp)
 		 return FALSE;
 	 if (!xdr_int (xdrs, &objp->b))
 		 return FALSE;
-	 if (!xdr_int (xdrs, &objp->peticion))
-		 return FALSE;
 	return TRUE;
 }

@@ -3,18 +3,16 @@
  * It was generated using rpcgen.
  */
 
-#include "suma.h"
+#include "calc.h"
 
 bool_t
-xdr_dupla_int (XDR *xdrs, dupla_int *objp)
+xdr_numsOperan (XDR *xdrs, numsOperan *objp)
 {
 	register int32_t *buf;
 
 	 if (!xdr_int (xdrs, &objp->a))
 		 return FALSE;
 	 if (!xdr_int (xdrs, &objp->b))
-		 return FALSE;
-	 if (!xdr_int (xdrs, &objp->peticion))
 		 return FALSE;
 	return TRUE;
 }
